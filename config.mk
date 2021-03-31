@@ -2,15 +2,15 @@
 
 # --- COMPILER --- #
 
-CC = clang
+CC =
 
 # --- LINKER --- #
 
-LD = clang
+LD =
 
 # --- DEPENDENCY GENERATOR --- #
 
-MM = gcc
+MM =
 
 # --- COMPILER FLAGS --- #
 
@@ -18,8 +18,8 @@ CCFLAGS +=
 
 # --- LINKER FLAGS --- #
 
-LDFLAGS += -framework ApplicationServices
-LDFLAGS += -framework AppKit
+LDFLAGS +=
+LDFLAGS +=
 
 # --- LINKER LIBRARIES --- #
 
@@ -27,17 +27,17 @@ LDLIBS +=
 
 # --- ARTIFACTS FOLDER --- #
 
-ART = bin
+ART =
 
 # --- BINARY EXECUTABLE NAME --- #
 
-EXE = dexterity
+EXE =
 
 # --- SOURCE FILE DIRECTORIES --- #
 
-DIR += .
-DIR += common
-DIR += test2
-DIR += test
+DIR +=
+DIR +=
+DIR +=
+DIR +=
 
 # ============================ #
