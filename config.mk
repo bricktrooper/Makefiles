@@ -19,7 +19,6 @@ CCFLAGS +=
 # --- LINKER FLAGS --- #
 
 LDFLAGS +=
-LDFLAGS +=
 
 # --- LINKER LIBRARIES --- #
 
@@ -35,9 +34,6 @@ EXE =
 
 # --- SOURCE FILE DIRECTORIES --- #
 
-DIR +=
-DIR +=
-DIR +=
 DIR +=
 
 # ============================ #
