@@ -55,9 +55,9 @@ $(shell mkdir -p $(addprefix $(ART)/, $(DIR)))
 # ======= LINK ======= #
 
 $(ART)/$(EXE): $(OBJ)
-	@echo "LD   $(OBJ)"
+	@echo "LD   $^"
 	@$(LD) $(LDLIBS) $(LDFLAGS) $^ -o $@
-	@echo "EXE  $(EXE)"
+	@echo "EXE  $@"
 
 # ======= COMPILE ======= #
 
@@ -74,6 +74,7 @@ $(ART)/%.d: %.c
 
 # ======= CLEAN ======= #
 
+.PHONY:
 clean:
 	@echo "RM   $(ART)/"
 	@rm -rf $(ART)
