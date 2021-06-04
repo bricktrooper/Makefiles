@@ -43,8 +43,8 @@ CCFLAGS += $(addprefix -I , $(DIR))
 SRC = $(wildcard *.c)
 SRC += $(wildcard $(addsuffix /*.c, $(DIR)))
 
-OBJ := $(SRC:.c=.o) special.o
-DEP := $(SRC:.c=.d) special.d
+OBJ := $(SRC:.c=.o)
+DEP := $(SRC:.c=.d)
 
 OBJ := $(addprefix $(ART)/, $(OBJ))
 
