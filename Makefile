@@ -55,8 +55,7 @@ $(shell mkdir -p $(addprefix $(ART)/, $(DIR)))
 # ======= LINK ======= #
 
 $(ART)/$(EXE): $(OBJ)
-	@echo "LD   ....."
-	@echo "$(OBJ)"
+	@echo "LD   $(OBJ)"
 	@$(LD) $(LDLIBS) $(LDFLAGS) $^ -o $@
 	@echo "EXE  $(EXE)"
 
