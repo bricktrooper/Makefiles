@@ -55,7 +55,8 @@ $(shell mkdir -p $(addprefix $(ART)/, $(DIR)))
 # ======= LINK ======= #
 
 $(ART)/$(EXE): $(OBJ)
-	@for object in `find $^`; do echo "LD   $$object"; done
+	@echo "LD   ....."
+	@echo "$(OBJ)"
 	@$(LD) $(LDLIBS) $(LDFLAGS) $^ -o $@
 	@echo "EXE  $(EXE)"
 
@@ -75,5 +76,5 @@ $(ART)/%.d: %.c
 # ======= CLEAN ======= #
 
 clean:
-	@for ARTIFACT in $(wildcard $(ART)/*); do echo "RM   $$ARTIFACT"; done
+	@echo "RM   $(ART)/"
 	@rm -rf $(ART)
