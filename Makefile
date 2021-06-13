@@ -24,24 +24,18 @@ ifeq ($(EXE), )
 $(error EXE was not specified)
 endif
 
-ifeq ($(DIR), )
-$(error DIR was not specified)
-endif
-
 # ======= PROCESS CONFIGURATION ======= #
 
-DIR := $(patsubst .,,$(DIR))
-
-VPATH += $(DIR)
-
 MMFLAGS += -I .
-MMFLAGS += $(addprefix -I , $(DIR))
-
 CCFLAGS += -I .
-CCFLAGS += $(addprefix -I , $(DIR))
+SRC += $(wildcard *.c)
 
-SRC = $(wildcard *.c)
+ifneq ($(DIR), )
+VPATH += $(DIR)
+MMFLAGS += $(addprefix -I , $(DIR))
+CCFLAGS += $(addprefix -I , $(DIR))
 SRC += $(wildcard $(addsuffix /*.c, $(DIR)))
+endif
 
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
@@ -50,7 +44,11 @@ OBJ := $(addprefix $(ART)/, $(OBJ))
 
 # ======= CREATE ARTIFACTS DIRECTORY ======= #
 
+ifneq ($(DIR), )
 $(shell mkdir -p $(addprefix $(ART)/, $(DIR)))
+else
+$(shell mkdir -p $(ART))
+endif
 
 # ======= LINK ======= #
 
