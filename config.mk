@@ -1,39 +1,18 @@
-# ======= BUILD CONFIG ======= #
-
-# --- COMPILER --- #
-
+# compiler / linker
 CC =
 
-# --- LINKER --- #
+# compiler / linker flags
+FLAGS +=
 
-LD =
+# linker libraries
+LIBS +=
 
-# --- DEPENDENCY GENERATOR --- #
-
-MM =
-
-# --- COMPILER FLAGS --- #
-
-CCFLAGS +=
-
-# --- LINKER FLAGS --- #
-
-LDFLAGS +=
-
-# --- LINKER LIBRARIES --- #
-
-LDLIBS +=
-
-# --- ARTIFACTS FOLDER --- #
-
-ART =
-
-# --- BINARY EXECUTABLE NAME --- #
-
-EXE =
-
-# --- SOURCE FILE DIRECTORIES --- #
-
+# source file directories
+# NOTE: include paths are searched in this order
 DIR +=
 
-# ============================ #
+# artifacts folder
+ART =
+
+# binary name
+BIN =

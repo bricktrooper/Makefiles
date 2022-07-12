@@ -1,45 +1,20 @@
-# ======= BUILD CONFIG ======= #
+# compiler / linker
+CC = clang
 
-# --- COMPILER --- #
+# compiler / linker flags
+FLAGS +=
 
-CC = gcc
+# linker libraries
+LIBS +=
 
-# --- LINKER --- #
+# source file directories
+# NOTE: include paths are searched in this order
+DIR += hello
+DIR += hey
+DIR += test
 
-LD = gcc
-
-# --- DEPENDENCY GENERATOR --- #
-
-MM = gcc
-
-# --- COMPILER FLAGS --- #
-
-CCFLAGS += -std=c17
-CCFLAGS += -Wall
-CCFLAGS += -Wpedantic
-
-# --- LINKER FLAGS --- #
-
-LDFLAGS += -std=c17
-LDFLAGS += -Wall
-LDFLAGS += -Wpedantic
-
-# --- LINKER LIBRARIES --- #
-
-LDLIBS +=
-
-# --- ARTIFACTS FOLDER --- #
-
+# artifacts folder
 ART = bin
 
-# --- BINARY EXECUTABLE NAME --- #
-
-EXE = demo
-
-# --- SOURCE FILE DIRECTORIES --- #
-
-DIR += hello
-DIR += test
-DIR += hey
-
-# ============================ #
+# binary name
+BIN = demo
